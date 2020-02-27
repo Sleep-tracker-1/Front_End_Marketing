@@ -1,3 +1,8 @@
+.aStyle {
+  text-decoration: none;
+  color: #293845;
+  font-size: 1.6rem;
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -131,6 +136,36 @@ table {
 }
 html {
   font-size: 62.5%;
+}
+html,
+body {
+  font-family: 'Roboto';
+}
+h1,
+h2 {
+  font-family: 'Norican';
+}
+h3,
+h4,
+h5 {
+  font-family: 'Lato';
+}
+.logo {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-size: 3rem;
+}
+.logo .footlogo {
+  font-size: 2.2rem;
+}
+p {
+  font-size: 1.6rem;
+}
+a {
+  text-decoration: none;
+  color: #293845;
+  font-size: 1.6rem;
 }
 img {
   max-width: 100%;
