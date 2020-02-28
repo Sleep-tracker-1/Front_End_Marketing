@@ -142,9 +142,7 @@ body {
   font-family: 'Roboto';
 }
 h1,
-h2 {
-  font-family: 'Norican';
-}
+h2,
 h3,
 h4,
 h5 {
@@ -154,7 +152,7 @@ h5 {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  font-size: 3rem;
+  font-size: 2.6rem;
 }
 .logo .footlogo {
   font-size: 2.2rem;
@@ -170,4 +168,46 @@ a {
 img {
   max-width: 100%;
   height: auto;
+}
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  background: #d2d1cf;
+}
+header .navContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 1%;
+  justify-content: space-between;
+  align-items: center;
+}
+header .navContainer nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 200px;
+  justify-content: space-between;
+}
+.splash {
+  background: url("/assets/headimg.jpg");
+  width: 100%;
+  height: 100vh;
+}
+.splash button {
+  position: absolute;
+  left: 45%;
+  bottom: 10%;
 }
