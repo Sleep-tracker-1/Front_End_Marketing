@@ -214,6 +214,7 @@ footer {
   padding: 1%;
   justify-content: space-between;
   align-items: center;
+  background-color: #d2d1cf;
 }
 footer small {
   position: absolute;
@@ -221,9 +222,13 @@ footer small {
   color: #4b5c6b;
 }
 .splash {
-  background: url("/assets/headimg.jpg");
+  background: url("/assets/headimg.jpg") no-repeat center center fixed;
   width: 100%;
   height: 100vh;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 .splash button {
   position: absolute;
