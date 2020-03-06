@@ -6,16 +6,21 @@
     background-position: 50% 50%;
     button {
       position: absolute;
-      left: 45%;
-      bottom: 6%;
+      left: 43%;
+      @media @tablet {
+        left: 41%;
+      }
+      @media @mobile {
+        left: 33%;
+      }
+      bottom: 5%;
       background: @btn-bgcolor;
       color: @btn-fontcolor;
       border: 1px solid @btn-bgcolor;
-      padding: 1% 2%;
+      padding: 10px 20px;
       border-radius: 5px;
       font-size: 1.8rem;
       transition: 300ms ease;
-
       &:hover {
         background: @btn-fontcolor;
         color: @btn-bgcolor;
@@ -33,7 +38,7 @@
     .content-text {
       .flex(column, wrap);
       width: 50%;
-      padding: 1%;
+      padding: 1% 2%;
       h3 {
         margin: 5px 0;
         margin-bottom: 20px;
@@ -44,32 +49,52 @@
     }
     .content-graph {
       width: 50%;
-      padding: 1%;
+      padding: 1% 2%;
+    }
+    @media @mobile {
+      .flex(column, wrap);
+      .content-text {
+        width: 100%
+      }
+      .content-graph {
+        width: 100%
+      }
     }
   }
 
   .member-section {
-    margin: 100px auto;
-    width: 80%;
+    margin: 60px auto;
+    width: 85%;
     .flex(column, wrap);
     .member {
       width: 100%;
       .flex(row, wrap);
       align-items: center;
+      justify-content: space-evenly;
+      border: 1px solid @fontcolor;
+      border-radius: 15px;
+      margin: 2%;
+      padding: 18px;
+      background: @barcolor + 30;
       img {
         width: 25%;
         height: auto;
         border-radius: 50%;
       }
       .member-text {
-        .flex(column, wrap);
+        .flex(column, nowrap);
         align-items: center;
-        width: 33%;
+        width: 50%;
         a {
           margin: 6px 0;
         }
         p {
           margin: 6px 0;
+        }
+        @media @tablet {
+          h3 {
+            font-size: 2rem;
+          }
         }
       }
     }
@@ -77,6 +102,12 @@
       width: 100%;
       .flex(row-reverse, wrap);
       align-items: center;
+      justify-content: space-evenly;
+      border: 1px solid @fontcolor;
+      border-radius: 15px;
+      margin: 2%;
+      padding: 18px;
+      background: @barcolor + 30;
       img {
         width: 25%;
         height: auto;
@@ -85,12 +116,17 @@
       .member-text {
         .flex(column, wrap);
         align-items: center;
-        width: 33%;
+        width: 50%;
         a {
           margin: 6px 0;
         }
         p {
           margin: 6px 0;
+        }
+        @media @tablet {
+          h3 {
+            font-size: 2rem;
+          }
         }
       }
     }

@@ -208,7 +208,7 @@ header .navContainer {
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
-  padding: 1%;
+  padding: 1% 2%;
   justify-content: space-between;
   align-items: center;
 }
@@ -218,13 +218,14 @@ header .navContainer nav {
   flex-wrap: wrap;
   width: 200px;
   justify-content: space-between;
+  padding-right: 5px;
 }
 footer {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
-  padding: 1%;
+  padding: 1% 2%;
   justify-content: space-between;
   align-items: center;
   background-color: #d2d1cf;
@@ -243,15 +244,25 @@ footer small {
 }
 .splash button {
   position: absolute;
-  left: 45%;
-  bottom: 6%;
+  left: 43%;
+  bottom: 5%;
   background: #293845;
   color: #dfe6ed;
   border: 1px solid #293845;
-  padding: 1% 2%;
+  padding: 10px 20px;
   border-radius: 5px;
   font-size: 1.8rem;
   transition: 300ms ease;
+}
+@media (max-width: 930px) {
+  .splash button {
+    left: 41%;
+  }
+}
+@media (max-width: 480px) {
+  .splash button {
+    left: 33%;
+  }
 }
 .splash button:hover {
   background: #dfe6ed;
@@ -272,7 +283,7 @@ footer small {
   flex-direction: column;
   flex-wrap: wrap;
   width: 50%;
-  padding: 1%;
+  padding: 1% 2%;
 }
 .content .content-text h3 {
   margin: 5px 0;
@@ -283,11 +294,24 @@ footer small {
 }
 .content .content-graph {
   width: 50%;
-  padding: 1%;
+  padding: 1% 2%;
+}
+@media (max-width: 480px) {
+  .content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .content .content-text {
+    width: 100%;
+  }
+  .content .content-graph {
+    width: 100%;
+  }
 }
 .member-section {
-  margin: 100px auto;
-  width: 80%;
+  margin: 60px auto;
+  width: 85%;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -298,6 +322,12 @@ footer small {
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: space-evenly;
+  border: 1px solid #293845;
+  border-radius: 15px;
+  margin: 2%;
+  padding: 18px;
+  background: #f0efed;
 }
 .member-section .member img {
   width: 25%;
@@ -307,9 +337,9 @@ footer small {
 .member-section .member .member-text {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
-  width: 33%;
+  width: 50%;
 }
 .member-section .member .member-text a {
   margin: 6px 0;
@@ -317,12 +347,23 @@ footer small {
 .member-section .member .member-text p {
   margin: 6px 0;
 }
+@media (max-width: 930px) {
+  .member-section .member .member-text h3 {
+    font-size: 2rem;
+  }
+}
 .member-section .member-reverse {
   width: 100%;
   display: flex;
   flex-direction: row-reverse;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: space-evenly;
+  border: 1px solid #293845;
+  border-radius: 15px;
+  margin: 2%;
+  padding: 18px;
+  background: #f0efed;
 }
 .member-section .member-reverse img {
   width: 25%;
@@ -334,11 +375,16 @@ footer small {
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
-  width: 33%;
+  width: 50%;
 }
 .member-section .member-reverse .member-text a {
   margin: 6px 0;
 }
 .member-section .member-reverse .member-text p {
   margin: 6px 0;
+}
+@media (max-width: 930px) {
+  .member-section .member-reverse .member-text h3 {
+    font-size: 2rem;
+  }
 }
