@@ -202,6 +202,7 @@ header {
   justify-content: center;
   align-items: center;
   background: #d2d1cf;
+  z-index: 3;
 }
 header .navContainer {
   display: flex;
@@ -212,6 +213,9 @@ header .navContainer {
   justify-content: space-between;
   align-items: center;
 }
+header .navContainer .logo {
+  float: left;
+}
 header .navContainer nav {
   display: flex;
   flex-direction: row;
@@ -219,6 +223,65 @@ header .navContainer nav {
   width: 200px;
   justify-content: space-between;
   padding-right: 5px;
+}
+header .navContainer .menu-btn {
+  display: none;
+}
+@media (max-width: 480px) {
+  header .navContainer {
+    display: block;
+  }
+  header .navContainer nav {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100%;
+    align-items: center;
+    clear: both;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+  }
+  header .navContainer nav a {
+    display: block;
+    padding: 20px;
+  }
+  header .navContainer .menu-icon {
+    padding: 15px 15px;
+    position: relative;
+    float: right;
+    cursor: pointer;
+  }
+  header .navContainer .menu-icon .nav-icon {
+    background: #333;
+    display: block;
+    height: 2px;
+    width: 18px;
+    position: relative;
+  }
+  header .navContainer .menu-icon .nav-icon::before {
+    background: #333;
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 5px;
+  }
+  header .navContainer .menu-icon .nav-icon::after {
+    background: #333;
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: -5px;
+  }
+  header .navContainer .menu-btn {
+    display: none;
+  }
+  header .navContainer .menu-btn:checked ~ nav {
+    max-height: 240px;
+  }
 }
 footer {
   display: flex;

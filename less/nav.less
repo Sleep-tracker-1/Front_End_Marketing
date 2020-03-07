@@ -2,22 +2,88 @@ header {
   .flex(row, wrap);
   width: 100%;
   position: fixed;
-	top: 0;	
-	overflow: hidden;
+  top: 0;
+  overflow: hidden;
   justify-content: center;
   align-items: center;
   background: @barcolor;
+  z-index: 3;
+
   .navContainer {
     .flex(row, wrap);
     width: 100%;
     padding: 1% 2%;
     justify-content: space-between;
     align-items: center;
+
+    .logo {
+      float: left;
+    }
+
     nav {
       .flex(row, wrap);
       width: 200px;
       justify-content: space-between;
       padding-right: 5px;
+    }
+    .menu-btn {
+      display: none;
+    }
+    @media @mobile {
+      display: block;
+
+      nav {
+        .flex(column, nowrap);
+        width: 100%;
+        align-items: center;
+        clear: both;
+        max-height: 0;
+        transition: max-height .2s ease-out;
+
+        a {
+          display: block;
+          padding: 20px;
+        }
+      }
+
+      .menu-icon {
+        padding: 15px 15px;
+        position: relative;
+        float: right;
+        cursor: pointer;
+        .nav-icon {
+          background: #333;
+          display: block;
+          height: 2px;
+          width: 18px;
+          position: relative;
+          &::before {
+            background: #333;
+            content:"";
+            display: block;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 5px;
+          }
+          &::after {
+            background: #333;
+            content:"";
+            display: block;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: -5px;
+          }
+        }
+      }
+
+      .menu-btn {
+        display: none;
+        &:checked ~ nav {
+          max-height: 240px;
+        }
+      }
     }
   }
 }
